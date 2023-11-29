@@ -67,7 +67,7 @@ max_norm = 5
 LOGs = []
 Betas = LinearAnnealing(n_iter=num_epoch,start=0.0,stop=0.2).tolist()
 l_reg = 0.2
-
+os.makedirs('MolVAE_REG',exist_ok=True)
 for ep in range(num_epoch):
     model.train()
     for inp in tqdm(train_loader):
