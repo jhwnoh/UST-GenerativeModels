@@ -25,7 +25,7 @@ python gru_traincode_gpu.py
 ```
 python gru_sampling_gpu.py [saved model file] [name to save sampled results]
 ```
-For example, if name of the saved model file is CharGRU/Logs_22.pth.tar and if we want to save the sampled result in random_sampled.pkl file,
+[Example] if name of the saved model file is Model_GRU.pth.tar, and if we want to save the sampled result in random_sampled.pkl file,
 ```
-python gru_sampling_gpu.py CharGRU/Logs_22.pth.tar random_sampled.pkl
+python gru_sampling_gpu.py Model_GRU.pth.tar random_sampled.pkl
 ```
