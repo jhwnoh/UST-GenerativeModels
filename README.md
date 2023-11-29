@@ -29,3 +29,20 @@ python gru_sampling_gpu.py [saved model file] [name to save sampled results]
 ```
 python gru_sampling_gpu.py Model_GRU.pth.tar random_sampled.pkl
 ```
+
+
+### TryWithGPU_VAE : training VAE with GPU
+
+1. Model training (chkpt file is saved in MolVAE directory)
+```
+python traincode_gpu.py
+```
+
+2. Sampling (saved into .pkl file)
+```
+python samplingcode_gpu.py [saved model file] [name to save sampled results]
+```
+[Example] if name of the saved model file is Model_VAE.pth.tar, and if we want to save the sampled result in random_sampled.pkl file,
+```
+python samplingcode_gpu.py Model_VAE.pth.tar random_sampled.pkl
+```
