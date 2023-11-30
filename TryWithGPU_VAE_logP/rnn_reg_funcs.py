@@ -9,7 +9,6 @@ import rdkit
 from rdkit import RDLogger  
 RDLogger.DisableLog('rdApp.*')        
 from rdkit.Chem import MolFromSmiles,MolToSmiles
-from utils import logP
 from tqdm import tqdm
 import numpy as np
 
@@ -172,8 +171,8 @@ def Sampling(sampler,dim_z,n_sample,max_len,tok_lib):
 
                 out,h = sampler.sampling(x_in,z,h,is_first)
                 prob = F.softmax(out,dim=-1).squeeze(1)
-                #x_in = torch.multinomial(prob,1)
-                x_in = torch.argmax(prob,-1).view(-1,1)
+                x_in = torch.multinomial(prob,1)
+                #x_in = torch.argmax(prob,-1).view(-1,1)
                 
                 x_hat.append(x_in.cpu().detach().numpy())
 
