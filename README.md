@@ -1,6 +1,6 @@
 # UST-GenerativeModels
 
-[Only for practice purpose]
+[Only for practice purpose] (jhwan@krict.re.kr)
 
 
 This is repository for practice code for UST2023-Fall 'Materials Informatics'
